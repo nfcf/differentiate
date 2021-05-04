@@ -80,7 +80,7 @@ var DifferentiateComponent = /** @class */ (function () {
                         array.push(item.value);
                     }
                     else if (item.type === DifferentiateNodeType.json) {
-                        array.push(_this.transformNodeToOriginalStructure(item, item.parent));
+                        array.push(_this.transformNodeToOriginalStructure(item.children, item.parent));
                     }
                     else if (item.type === DifferentiateNodeType.array) {
                         array.push(_this.transformNodeToOriginalStructure(item.children, item.parent));

@@ -107,7 +107,7 @@ export class DifferentiateComponent implements OnInit, OnChanges {
           if (item.type === DifferentiateNodeType.literal) {
             array.push(item.value);
           } else if (item.type === DifferentiateNodeType.json) {
-            array.push(this.transformNodeToOriginalStructure(item, item.parent));
+            array.push(this.transformNodeToOriginalStructure(item.children, item.parent));
           } else if (item.type === DifferentiateNodeType.array) {
             array.push(this.transformNodeToOriginalStructure(item.children, item.parent));
           }
